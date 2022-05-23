@@ -1,11 +1,18 @@
 <template>
-  <VSelect label="Sort by" :items="sortByValues"></VSelect>
+  <VSelect
+    label="Sort by"
+    :items="sortByValues"
+    @changedValue="updateValue"
+    :value="value"
+  ></VSelect>
 </template>
 
 <script>
 export default {
+  emits: ["updatePagination"],
   data() {
     return {
+      value: "",
       sortByValues: [
         {
           id: 1,
@@ -25,6 +32,13 @@ export default {
         },
       ],
     };
+  },
+  methods: {
+    updateValue(v) {
+      this.value = v;
+      console.log("update");
+      this.$emit("updatePagination", this.value);
+    },
   },
 };
 </script>
