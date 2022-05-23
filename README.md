@@ -1,14 +1,6 @@
-# pokemon-registry
+# Pokemon registry app
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Build on top of Vue & Vite and using pokeapi.co, this app allows you to search and sort through pokemons and display their details.
 
 ## Project Setup
 
@@ -46,3 +38,9 @@ npm run test:e2e # or `npm run test:e2e:ci` for headless testing
 ```sh
 npm run lint
 ```
+
+## To-Do
+
+[ ] Fetch all pokemons [ ] Card based component to display pokemons [ ] Customizable pagination [ ] Pagination [ ] Search by name x abilities [ ] Sort by name x abilities [ ] Local storage [ ] Details page
+
+[ ] Write component tests [ ] Responsive [ ] Accessibility check [ ] Keyboard nav [ ] Focus states [ ] Contrasts and fonts [ ] Husky for pre-commit
