@@ -44,8 +44,8 @@ npm run lint
 
 
 ## To-Do
-[ ] Fetch all pokemons
-[ ] Card based component to display pokemons
+[x] Fetch all pokemons
+[x] Card based component to display pokemons
 [ ] Customizable pagination 
 [ ] Pagination
 [ ] Search by name x abilities
