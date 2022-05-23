@@ -1,6 +1,9 @@
-# Pokemon registry app
 
-Build on top of Vue & Vite and using pokeapi.co, this app allows you to search and sort through pokemons and display their details.
+# Pokemon registry app
+Build on top of Vue & Vite and using pokeapi.co, this app allows you to search and sort through pokemons and display their details. 
+
+
+
 
 ## Project Setup
 
@@ -39,8 +42,24 @@ npm run test:e2e # or `npm run test:e2e:ci` for headless testing
 npm run lint
 ```
 
+
 ## To-Do
+[ ] Fetch all pokemons
+[ ] Card based component to display pokemons
+[ ] Customizable pagination 
+[ ] Pagination
+[ ] Search by name x abilities
+[ ] Sort by name x abilities
+[ ] Local storage
+[ ] Details page 
 
-[ ] Fetch all pokemons [ ] Card based component to display pokemons [ ] Customizable pagination [ ] Pagination [ ] Search by name x abilities [ ] Sort by name x abilities [ ] Local storage [ ] Details page
 
-[ ] Write component tests [ ] Responsive [ ] Accessibility check [ ] Keyboard nav [ ] Focus states [ ] Contrasts and fonts [ ] Husky for pre-commit
+[ ] Write component tests
+[ ] Responsive
+[ ] Accessibility check
+	[ ] Keyboard nav
+	[ ] Focus states
+	[ ] Contrasts and fonts
+[ ] Husky for pre-commit 
+
+ 
