@@ -2,7 +2,7 @@
   <main class="min-h-screen">
     <Search></Search>
     <Sort></Sort>
-    <Grid :data="data"></Grid>
+    <Grid v-if="data" :data="data"></Grid>
   </main>
 </template>
 
@@ -25,6 +25,7 @@ export default {
       }`
     )
       .then((data) => {
+        console.log(data);
         this.data = data;
       })
       .catch((e) => {
