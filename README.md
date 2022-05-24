@@ -4,6 +4,8 @@ Build on top of Vue & Vite and using pokeapi.co, this app allows you to search a
 
 ## Project Setup
 
+- Create an .env file and copy data from .env.example
+
 ```sh
 npm install
 ```
@@ -41,6 +43,6 @@ npm run lint
 
 ## To-Do
 
-[x] Fetch all pokemons [x] Card based component to display pokemons [x] Customizable pagination [x] Pagination [x] Search by name x abilities [x] Sort by name,weight, height [ ] Local storage / persist in url [x] Details page [ ] Loading state
+[x] Fetch all pokemons [x] Card based component to display pokemons [x] Customizable pagination [x] Pagination [x] Search by name x abilities [x] Sort by name,weight, height [ ] Local storage / persist in url [x] Details page [x] Loading state
 
-[ ] Write component tests [x] Responsive [x] Accessibility check [x] Keyboard nav [x] Focus states [x] Contrasts and fonts [ ] Husky for pre-commit
+[x] Write component tests [x] Responsive [x] Accessibility check [x] Keyboard nav [x] Focus states [x] Contrasts and fonts [ ] Husky for pre-commit
