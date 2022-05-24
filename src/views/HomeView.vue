@@ -35,23 +35,33 @@ export default {
     updatePagination(v) {
       this.limit = v;
       this.currentPage = 0;
-      this.refreshData();
+      this.fetchData();
     },
     updatePage(newPage) {
       this.currentPage = newPage;
-      this.refreshData();
+      this.fetchData();
     },
 
-    refreshData() {
+    fetchData() {
       this.loading = true;
-
       fetchData(
         `${import.meta.env.VITE_POKEMON_API}/pokemon?limit=${
           this.limit
         }&offset=${this.limit * this.currentPage}`
       )
         .then((data) => {
-          this.data = data;
+          let details = [];
+
+          const promises = data.results.map((res) => {
+            return fetchData(
+              `${import.meta.env.VITE_POKEMON_API}/pokemon/${res.name}`
+            );
+          });
+
+          Promise.all(promises).then((responses) => {
+            details = responses;
+            this.data = { ...data, results: details };
+          });
         })
         .catch((e) => {
           console.log(e);
@@ -62,16 +72,7 @@ export default {
     },
   },
   mounted() {
-    fetchData(
-      `${import.meta.env.VITE_POKEMON_API}/pokemon?limit=${this.limit}&offset=0`
-    )
-      .then((data) => {
-        console.log(data);
-        this.data = data;
-      })
-      .catch((e) => {
-        console.log(e);
-      });
+    this.fetchData();
   },
 };
 </script>
