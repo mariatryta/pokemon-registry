@@ -1,6 +1,6 @@
 <template>
   <header
-    class="font-main flex bg-blue-100 px-10 items-center justify-center"
+    class="font-main flex bg-blue-100 px-10 items-center justify-center text-gray-800"
     :class="{ 'justify-between': viewName === 'details' }"
   >
     <router-link
