@@ -15,7 +15,7 @@
       class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm mr-3"
     />
 
-    <VButton class="flex-1" type="submit"> Submit Search </VButton>
+    <VButton class="flex-shrink-0 w-1/3" type="submit"> Submit Search </VButton>
   </form>
 </template>
 

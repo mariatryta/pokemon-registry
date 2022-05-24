@@ -3,7 +3,7 @@
     <div class="flex mb-20 justify-between items-center">
       <div class="flex items-center">
         <Search @submitSearch="searchData"> </Search>
-        <Sort></Sort>
+        <Sort @updateSort="sortData" class="ml-12"></Sort>
       </div>
       <div class="flex items-center">
         <PaginationOptions
@@ -43,7 +43,7 @@ export default {
       this.fetchData();
     },
     searchData(val) {
-      const searchedData = [...this.data.results].filter((pokemon) => {
+      const searchedResults = [...this.data.results].filter((pokemon) => {
         const searchedAbilities = pokemon.abilities.filter((a) => {
           return a.ability.name.includes(val);
         });
@@ -51,7 +51,27 @@ export default {
         return searchedAbilities.length > 0 || pokemon.name.includes(val);
       });
 
-      this.filteredData = { ...this.data, results: searchedData };
+      this.filteredData = { ...this.data, results: searchedResults };
+    },
+
+    sortByName(x, y) {
+      return x.name.localeCompare(y.name);
+    },
+
+    sortData(type) {
+      let sortedResults = [];
+
+      if (type !== "name") {
+        sortedResults = [...this.data.results].sort(function (a, b) {
+          return a[type] - b[type];
+        });
+      } else {
+        sortedResults = [...this.data.results].sort(this.sortByName);
+      }
+
+      sortedResults.forEach((res) => console.log(res[type]));
+
+      this.data = { ...this.data, results: sortedResults };
     },
 
     fetchData() {

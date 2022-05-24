@@ -1,6 +1,6 @@
 <template>
   <VSelect
-    label="Sort by"
+    label="Paginate by"
     :items="sortByValues"
     @changedValue="updateValue"
     :value="value"

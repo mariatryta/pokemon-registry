@@ -1,30 +1,42 @@
 <template>
-  <VSelect label="Sort by" :items="sortByValues"></VSelect>
+  <VSelect
+    label="Sort by"
+    :items="sortByValues"
+    @changedValue="updateValue"
+    :value="value"
+  ></VSelect>
 </template>
 
 <script>
 export default {
   data() {
     return {
+      value: "",
       sortByValues: [
         {
-          id: 1,
-          value: 10,
-          label: 10,
+          id: "weight",
+          value: "weight",
+          label: "Weight",
         },
 
         {
-          id: 2,
-          value: 20,
-          label: 20,
+          id: "height",
+          value: "height",
+          label: "Height",
         },
         {
-          id: 3,
-          value: 50,
-          label: 50,
+          id: "name",
+          value: "name",
+          label: "Name",
         },
       ],
     };
+  },
+  methods: {
+    updateValue(v) {
+      this.value = v;
+      this.$emit("updateSort", this.value);
+    },
   },
 };
 </script>
