@@ -1,5 +1,5 @@
 <template>
-  <main class="relative min-h-screen pb-20">
+  <main id="main" class="relative min-h-screen pb-20">
     <div
       class="flex flex-col md:flex-row mb-10 md:mb-20 justify-between items-center"
     >

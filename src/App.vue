@@ -10,6 +10,13 @@
     >
       Go back
     </router-link>
+
+    <router-link
+      to="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-0 focus:top-0"
+      >Skip to main content</router-link
+    >
+
     <div class="py-10 text-4xl">Pokemon registry</div>
     <div v-if="viewName === 'details'"></div>
   </header>
