@@ -5,13 +5,13 @@
     <img
       class="object-contain aspect-square w-full"
       :src="item.sprites.other['official-artwork'].front_default"
-      v-if="item"
+      alt=""
     />
 
     <h2 class="mt-4 text-xl font-bold text-gray-900 capitalize">
       {{ item.name }}
     </h2>
-    <ul v-if="item" class="mt-2 text-sm flex-1">
+    <ul class="mt-2 text-sm flex-1">
       <li><span>Height:</span> {{ item.height }}</li>
       <li><span>Weight:</span> {{ item.weight }}</li>
       <li>
