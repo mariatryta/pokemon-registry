@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <Grid v-if="data" :data="data"></Grid>
+    <Grid v-if="data" :data="filteredData ? filteredData : data"></Grid>
   </main>
 </template>
 
@@ -29,6 +29,7 @@ export default {
       limit: 20,
       currentPage: 0,
       data: null,
+      filteredData: null,
     };
   },
   methods: {
@@ -41,9 +42,22 @@ export default {
       this.currentPage = newPage;
       this.fetchData();
     },
+    searchData(val) {
+      const searchedData = [...this.data.results].filter((pokemon) => {
+        const searchedAbilities = pokemon.abilities.filter((a) => {
+          return a.ability.name.includes(val);
+        });
+
+        return searchedAbilities.length > 0 || pokemon.name.includes(val);
+      });
+
+      this.filteredData = { ...this.data, results: searchedData };
+    },
 
     fetchData() {
       this.loading = true;
+      this.filteredData = null;
+
       fetchData(
         `${import.meta.env.VITE_POKEMON_API}/pokemon?limit=${
           this.limit
