@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="flex">
     <VButton
       class="ml-3"
       @click="$emit('updatePage', currentPage - 1)"

@@ -1,11 +1,16 @@
 <template>
   <main class="min-h-screen pb-20">
-    <div class="flex mb-20 justify-between items-center">
-      <div class="flex items-center">
+    <div
+      class="flex flex-col md:flex-row mb-10 md:mb-20 justify-between items-center"
+    >
+      <div class="flex flex-col md:flex-row items-center w-full mb-3 md:mb-0">
         <Search @submitSearch="searchData"> </Search>
-        <Sort @updateSort="sortData" class="ml-12"></Sort>
+        <Sort
+          @updateSort="sortData"
+          class="md:ml-12 mt-3 md:mt-0 w-full md:w-1/5"
+        ></Sort>
       </div>
-      <div class="flex items-center">
+      <div class="flex items-center justify-between md:justify-end w-full">
         <PaginationOptions
           @updatePagination="updatePagination"
         ></PaginationOptions>
@@ -16,7 +21,17 @@
       </div>
     </div>
 
-    <Grid v-if="data" :data="filteredData ? filteredData : data"></Grid>
+    <Grid
+      v-if="data"
+      :data="filteredData ? filteredData : data"
+      class="mb-20"
+    ></Grid>
+
+    <Pagination
+      :currentPage="currentPage"
+      @updatePage="updatePage"
+      class="flex justify-end"
+    ></Pagination>
   </main>
 </template>
 

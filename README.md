@@ -48,8 +48,8 @@ npm run lint
 [x] Card based component to display pokemons
 [x] Customizable pagination 
 [x] Pagination
-[ ] Search by name x abilities
-[ ] Sort by name x abilities
+[x] Search by name x abilities
+[x] Sort by name,weight, height
 [ ] Local storage / persist in url
 [ ] Details page 
 [ ] Loading state

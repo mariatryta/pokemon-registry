@@ -32,15 +32,13 @@
       role="link"
       :aria-label="`Read more about {{item.name}}`"
       @click="$router.push(`/details/${item.name}`)"
-      class="mt-1"
+      class="w-full md:w-auto mt-3"
       >read more</VButton
     >
   </article>
 </template>
 
 <script>
-import fetchData from "@/helpers/fetchData.js";
-
 export default {
   props: {
     item: {

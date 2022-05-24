@@ -12,10 +12,10 @@
       v-model="searchString"
       id="search-field"
       type="text"
-      class="w-full p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm mr-3"
+      class="w-3/5 flex-grow-0 p-4 pr-12 text-sm border-gray-200 rounded-lg shadow-sm mr-3"
     />
 
-    <VButton class="flex-shrink-0 w-1/3" type="submit"> Submit Search </VButton>
+    <VButton class="flex-shrink-0 w-2/5" type="submit"> Search </VButton>
   </form>
 </template>
 

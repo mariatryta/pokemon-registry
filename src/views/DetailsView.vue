@@ -1,5 +1,5 @@
 <template>
-  <div>details</div>
+  <main class="min-h-screen pb-20"></main>
 </template>
 
 <script>

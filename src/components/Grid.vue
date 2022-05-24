@@ -1,5 +1,5 @@
 <template>
-  <section class="grid grid-cols-5 gap-5">
+  <section class="grid sm:grid-col-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
     <GridCard
       v-for="item in data.results"
       :key="item.name"
@@ -13,7 +13,8 @@ export default {
   props: {
     data: {
       type: Object,
-      default: {},
+      require: true,
+      default: null,
     },
   },
 };
