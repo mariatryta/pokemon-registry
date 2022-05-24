@@ -3,7 +3,7 @@
     class="relative p-8 border border-gray-100 bg-white shadow-xl rounded-xl flex flex-col text-center items-center"
   >
     <img
-      class="object-contain"
+      class="object-contain aspect-square w-full"
       :src="item.sprites.other['official-artwork'].front_default"
       v-if="item"
     />

@@ -1,5 +1,5 @@
 <template>
-  <main class="min-h-screen pb-20">
+  <main class="relative min-h-screen pb-20">
     <div
       class="flex flex-col md:flex-row mb-10 md:mb-20 justify-between items-center"
     >
@@ -32,6 +32,8 @@
       @updatePage="updatePage"
       class="flex justify-end"
     ></Pagination>
+
+    <LoadingOverlay v-show="loading"></LoadingOverlay>
   </main>
 </template>
 
@@ -45,6 +47,7 @@ export default {
       currentPage: 0,
       data: null,
       filteredData: null,
+      loading: true,
     };
   },
   methods: {
@@ -91,6 +94,7 @@ export default {
 
     fetchData() {
       this.loading = true;
+
       this.filteredData = null;
 
       fetchData(

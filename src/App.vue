@@ -1,5 +1,8 @@
 <template>
-  <header class="font-main flex bg-blue-100 px-10 justify-between items-center">
+  <header
+    class="font-main flex bg-blue-100 px-10 items-center justify-center"
+    :class="{ 'justify-between': viewName === 'details' }"
+  >
     <router-link
       to="/"
       v-if="viewName === 'details'"
