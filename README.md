@@ -46,13 +46,13 @@ npm run lint
 ## To-Do
 [x] Fetch all pokemons
 [x] Card based component to display pokemons
-[ ] Customizable pagination 
-[ ] Pagination
+[x] Customizable pagination 
+[x] Pagination
 [ ] Search by name x abilities
 [ ] Sort by name x abilities
-[ ] Local storage
+[ ] Local storage / persist in url
 [ ] Details page 
-
+[ ] Loading state
 
 [ ] Write component tests
 [ ] Responsive

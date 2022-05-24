@@ -36,7 +36,6 @@ export default {
   methods: {
     updateValue(v) {
       this.value = v;
-      console.log("update");
       this.$emit("updatePagination", this.value);
     },
   },

@@ -7,17 +7,11 @@
       :src="itemDetails.sprites.other['official-artwork'].front_default"
       v-if="itemDetails"
     />
-    <h2
-      class="mt-4 text-xl font-bold text-gray-900 hover:border-b hover:border-b-sky-700 duration-150 ease-in-out"
-    >
-      <router-link
-        class="after:content-[''] after:absolute after:top-0 after:left-0 capitalize"
-        :to="`/details/${item.name}`"
-        aria-describedby="card-description"
-        >{{ item.name }}</router-link
-      >
+
+    <h2 class="mt-4 text-xl font-bold text-gray-900 capitalize">
+      {{ item.name }}
     </h2>
-    <ul v-if="itemDetails" class="mt-2 text-sm">
+    <ul v-if="itemDetails" class="mt-2 text-sm flex-1">
       <li><span>Height:</span> {{ itemDetails.height }}</li>
       <li><span>Weight:</span> {{ itemDetails.weight }}</li>
       <li>
@@ -33,8 +27,13 @@
         </ul>
       </li>
     </ul>
-    <span class="sr-only" aria-hidden="true" id="card-description"
-      >read more</span
+
+    <VButton
+      role="link"
+      :aria-label="`Read more about {{item.name}}`"
+      @click="$router.push(`/details/${item.name}`)"
+      class="mt-1"
+      >read more</VButton
     >
   </article>
 </template>

@@ -3,7 +3,7 @@
     <span class="sr-only"> Sort </span>
 
     <select
-      class="py-3 pl-5 pr-10 text-xs font-medium border-gray-200 rounded-l-md hover:z-10 focus:outline-none focus:border-indigo-600 focus:z-10 hover:bg-gray-50 focus:ring-0"
+      class="py-3 pl-5 pr-10 text-xs font-medium border-gray-200 hover:z-10 focus:outline-none focus:border-indigo-600 focus:z-10 hover:bg-gray-50 focus:ring-0"
       id="sort"
       name="sort"
       :value="value"
