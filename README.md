@@ -55,11 +55,11 @@ npm run lint
 [ ] Loading state
 
 [ ] Write component tests
-[ ] Responsive
-[ ] Accessibility check
-	[ ] Keyboard nav
-	[ ] Focus states
-	[ ] Contrasts and fonts
+[x] Responsive
+[x] Accessibility check
+	[x] Keyboard nav
+	[x] Focus states
+	[x] Contrasts and fonts
 [ ] Husky for pre-commit 
 
  
